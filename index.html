@@ -1,0 +1,869 @@
+
+<!--
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Bluetec Documentation</title>
+
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<section class="bg-color">
+        	<div class="row">
+            	<div class="col-md-3">
+            	  <h4 class="title">AKSTech</h4>
+           	  </div>
+                <div class="col-md-7">Thank you for purchasing our theme. If you have any questions that are beyond the scope of this help file, please feel free to ask via item's comments. Also please don't forget to give item ratings! Thanks so much! :)
+</div>
+                <div class="col-md-2 text-right"><a class="btn btn-primary mt15" href="http://themeforest.net/user/designesia/portfolio">View All Our Items</a></div>
+            </div>
+    </section>
+    
+    <section>
+		<h2>Basics</h2>
+		
+    	<div class="expand">
+			<div class="title">HTML Structure</div>
+			<div class="content">This template using Bootstrap framework. Main content is placed between header and footer area. The content is nested within <strong>&lt;div id=&quot;content&quot;&gt;</strong>. 
+            
+            <pre>... header area ...
+
+&lt;div id=&quot;<strong>content</strong>&quot;&gt;
+     &lt;div class=&quot;<strong>container</strong>&quot;&gt;
+          &lt;div class=&quot;<strong>row</strong>&quot;&gt;
+               &lt;div class=&quot;<strong>col-md-4</strong>&quot;&gt;
+                    this is your content			
+               &lt;/div&gt;
+               &lt;div class=&quot;<strong>col-md-8</strong>&quot;&gt;<strong>
+</strong>                    this is your content
+               &lt;/div&gt;
+          &lt;/div&gt;
+     &lt;/div&gt;
+
+     &lt;section&gt;
+          &lt;div class=&quot;<strong>container</strong>&quot;&gt;
+               &lt;div class=&quot;<strong>row</strong>&quot;&gt;
+                    this is your content
+               &lt;/div&gt;
+          &lt;/div&gt;
+     &lt;/section&gt;
+
+&lt;/div&gt;
+
+
+... footer area ...
+        </pre>
+            
+            </div>
+		</div>
+		
+		<div class="expand">
+			<div class="title">Create Columns</div>
+			<div class="content">
+            <p>For a simple two column layout, create a <strong>.row</strong> and add the appropriate number of <strong>.col-md-*</strong> columns. As this is a 12-column grid, each <strong>.col-md-*</strong> spans a number of those 12 columns, and should always add up to 12 for each row (or the number of columns in the parent).</p>
+			
+			<p>Please read more for Bootstrap grid system here: <a href="https://getbootstrap.com/docs/4.5/layout/grid/">https://getbootstrap.com/docs/4.5/layout/grid/</a></p>
+			
+      <pre>&lt;div class=&quot;<strong>row</strong>&quot;&gt;<br>     &lt;div class=&quot;<strong>col-md-6</strong>&quot;&gt; this is 1/2 columns &lt;/div&gt;<br>     &lt;div class=&quot;<strong>col-md-6</strong>&quot;&gt; this is 1/2 columns &lt;/div&gt;<br>&lt;/div&gt;
+
+&lt;div class=&quot;<strong>row</strong>&quot;&gt;<br>     &lt;div class=&quot;<strong>col-md-4</strong>&quot;&gt; this is 1/3 columns &lt;/div&gt;<br>     &lt;div class=&quot;<strong>col-md-8</strong>&quot;&gt; this is 2/3 columns &lt;/div&gt;<br>&lt;/div&gt;
+
+&lt;div class=&quot;<strong>row</strong>&quot;&gt;<br>     &lt;div class=&quot;<strong>col-md-3</strong>&quot;&gt; this is 1/4 columns &lt;/div&gt;<br>     &lt;div class=&quot;<strong>col-md-9</strong>&quot;&gt; this is 3/4 columns &lt;/div&gt;<br>&lt;/div&gt;</pre>
+
+			</div>
+		</div>
+		
+		<div class="expand">
+			<div class="title">Change scheme color</div>
+			<div class="content">
+			  <p>For each template page, look at line 30 below</p>
+			  <pre>&lt;link id=&quot;colors&quot; href=&quot;css/colors/scheme-01.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;</pre>
+			  <p>Then replace scheme-01.css with another value. You can choose one of below: scheme-01.css, scheme-02.css, scheme-03.css, scheme-04.css.</p>
+			  <p>All premade color on this template can be found inside folder css/colors/.</p>
+			</div>
+		</div>
+		
+		<div class="expand">
+			<div class="title">Animate object on scroll</div>
+			<div class="content"><p>Select an object that you want to animate. As example you want create animate for H1 element. You can see below:        </p>
+        <pre>&lt;h1 class=<strong>&quot;wow fadeIn&quot;</strong> data-wow-delay=<strong>&quot;.2s&quot; data-wow-duration=&quot;.5s&quot;</strong>&gt;Animate Text&lt;/h1&gt;
+</pre>
+        <ul>
+          <li>You must add class name &quot;<strong>wow</strong>&quot; for object that you want to animate.
+          </li>
+          <li><strong>fadeIn</strong>: sample type of animation. You can see all animation available from: <a href="http://daneden.github.io/animate.css/">http://daneden.github.io/animate.css/</a></li>
+          <li><strong>data-wow-delay</strong>: determine when animation will start (on second)</li>
+		  <li><strong>data-wow-duration</strong>: determine duration of animation (on second)</li>
+        </ul>
+			</div>
+		</div>
+		
+		<div class="expand">
+			<div class="title">Custom background color for div/section</div>
+			<div class="content">
+            	
+				<p>To make custom background color without touching css file, you can use code <strong>data-bgcolor=&quot;#hex-color&quot;</strong>            within your div/section tag. See sample below:</p>
+				<pre>&lt;div <strong>data-bgcolor</strong>=&quot;#333333&quot;&gt;<br>     my div content...<br>&lt;/div&gt;</pre>
+				
+			</div>
+		</div>
+		
+		<div class="expand">
+			<div class="title">Custom background image for div/section</div>
+			<div class="content">
+            	
+				<p>To make custom background image without touching css file, you can use code <strong>data-bgimage=&quot;url(your-image-url)&quot; </strong>            within your div/section tag. See sample below:</p>
+				<pre>&lt;div <strong>data-bgimage</strong>=&quot;<strong>url(images/background/bg-1.jpg)</strong>&quot;&gt;<br>     my div content...<br>&lt;/div&gt;        </pre>
+				
+			</div>
+		</div>
+		
+		<div class="expand">
+			<div class="title">Create parallax background</div>
+			<div class="content">
+            	
+				<p>First create custom background for your section/div, you can use code <strong>data-bgimage=&quot;url(your-image-url)&quot; </strong>            within your div/section tag. See sample below:</p>
+				<pre>&lt;div <strong>data-bgimage</strong>=&quot;<strong>url(images/background/bg-1.jpg)</strong>&quot;&gt;<br>     my div content...<br>&lt;/div&gt;        </pre>
+				
+				<p>Add attribute data-stellar-background-ratio for images speed.</p>
+				<pre>&lt;div data-bgimage=&quot;url(images/background/bg-1.jpg)&quot; data-stellar-background-ratio=&quot;.2&quot;&gt; my div content... &lt;/div&gt;</pre>
+			</div>
+		</div>
+		
+        <div class="expand">
+			<div class="title">Change contact form email address </div>
+			<div class="content">Open &gt; <strong>email.php</strong>. Change<strong> $to</strong> value with your email.</div>
+		</div>
+        
+	</section>
+    
+	    
+	<section>
+		<h2>jQuery and CSS Files</h2>
+		
+    	<div class="expand">
+			<div class="title">List of javascipt files</div>
+			<div class="content">
+				<ul>
+				  <li><strong>jquery.min.js</strong> - http://docs.jquery.com/Downloading_jQuery</li>
+					<li><strong>bootstrap.min.js</strong> - bootstrap js file</li>
+					<li><strong>designesia.js</strong> - custom js file</li>
+					<li><strong>jquery.isotope.min.js</strong> - used in gallery page</li>
+					<li><strong>jquery.magnific-popup.min.js</strong> - used to open popup image</li>
+					<li><strong>easing.js</strong> - http://archive.plugins.jquery.com/project/Easing</li>
+					<li><strong>jquery.ui.totop.js</strong> - used to scroll to top</li>
+					<li><strong>validation.js</strong> - used for contact form validation</li>
+			  </ul>
+			</div>
+		</div>
+		
+		<div class="expand">
+			<div class="title">List of CSS files</div>
+			<div class="content">
+            	<ul>
+                	<li><strong>animate.css</strong> - used to make animation </li>
+                	<li><strong>bg.css</strong> - used to set background for all section and subheader</li>
+                    <li><strong>bootstrap.css</strong> - main css framework for this theme</li>
+                    <li><strong>color.css</strong> - used to load color for template</li>
+                    <li><strong>magnific-popup.css</strong> - for maginfic popup jquery</li>
+                    <li><strong>owl.carousel.css, owl.theme.css, owl.transitions.css</strong> - for owl carousel jquery</li>
+                    <li><strong>plugin.css</strong> - overwrite default plugin css</li>
+                    <li><strong>rev-settings.css</strong> - custom css for Revolution Slider</li>
+                    <li><strong>style.css</strong> - main css file for this template</li>
+                </ul>
+            </div>
+		</div>
+		
+	</section>
+
+</div>
+	
+</body>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/easing.js"></script>
+    <script src="js/custom.js"></script>
+
+</html>
+
+-->
+
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+<meta charset="utf-8">
+<title>AKSTech </title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="Bluetec Saas Software Startup Website Template" name="description">
+<meta content name="keywords">
+<meta content name="author">
+<!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-grid.min.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-reboot.min.css" rel="stylesheet" type="text/css">
+<link href="css/animate.css" rel="stylesheet" type="text/css">
+<link href="css/owl.carousel.css" rel="stylesheet" type="text/css">
+<link href="css/owl.theme.css" rel="stylesheet" type="text/css">
+<link href="css/owl.transitions.css" rel="stylesheet" type="text/css">
+<link href="css/magnific-popup.css" rel="stylesheet" type="text/css">
+<link href="css/jquery.countdown.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css1/responsive.css" rel="stylesheet" type="text/css">
+
+
+
+	
+
+
+
+</div>
+<!-- <div class="align-self-center ml-auto header-col-left">
+<a class="btn-custom" href="#"><i class="fa fa-arrow-down"></i> AKSTech</a>
+<span id="menu-btn"></span>
+</div>
+<div class="clearfix"></div>-->
+
+</div>
+</div>
+</div>
+</div>
+
+
+<link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
+<link href="css/coloring.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="wrapper">
+
+<header class="header-light transparent scroll-light">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="d-flex justify-content-between">
+<div class="align-self-center header-col-left">
+
+
+<div id="logo">
+<a href="index.html">
+<img src="images/information.jpg" height="40" width="50"/>
+</a>
+</div>
+
+
+</div>
+<div class="align-self-center ml-auto header-col-mid">
+
+<ul id="mainmenu">
+<li>
+<a href="index.html">Anasayfa</a>
+</li>
+
+<li>
+<a href="Hakkımızda.html">Hakkımızda</a>
+</li>
+
+<li>
+<a href="Misyon-Vizyon.html">Misyon-Vizyon</a>
+</li>
+
+<li>
+<a href="Ürünlerimiz.html">Ürünlerimiz</a>
+<ul>
+<li><a href="Switch.html">Switch</a></li>
+<li><a href="Server.html">Server</a></li>
+<li><a href="Access Point.html">Access Point</a></li>
+</ul>
+
+<li>
+	<a href="Birimlerimiz.html">Birimlerimiz</a>
+	<ul>
+	<li><a href="Sızma Testi Hizmetleri.html">Sızma Testi Hizmetleri</a></li>
+	<li><a href="Bakım ve Destek Hizmetleri.html">Bakım ve Destek Hizmetleri</a></li>
+	<li><a href="Danışmanlık ve Yönetilebilir Hizmetler.html">Danışmanlık ve Yönetilebilir Hizmetler</a></li>
+	</ul>
+</li>
+
+<li>
+<a href="İletişim.html">İletişim</a>
+</li>
+
+
+
+
+
+
+</div>
+<div class="align-self-center ml-auto header-col-right">
+<a class="btn-custom" href="Birimlerimiz.html"> Satın Alın</a>
+<span id="menu-btn"></span>
+</div>
+<div class="clearfix"></div>
+</div>
+</div>
+</div>
+</div>
+</header>
+</div>
+
+
+<section id="section-highlight" data-bgimage="url(images/background/2.png) top">
+	<div class="container">
+	<div class="row">
+	<div class="col-lg-6 offset-lg-3">
+	<div class="text-center">
+	<h2><span class="uptitle id-color"></span>Duyurular</h2>
+	
+	<div class="spacer-20"></div>
+	</div>
+	</div>
+	</div>
+	<div class="row">
+	
+	<div class="col-lg-4 col-md-6 mb40 wow fadeInUp" data-wow-delay="0s">
+	<div class="feature-box f-boxed style-3">
+	
+	<div class="text">
+		<h5>Zafiyet Açığı</h5>
+	<p>
+		Kremlin Destekli APT28 Microsoft Outlook Zafiyetini Sömürüyor.
+	<div class="de_testi_by"><img alt class="rounded-circle" src="" /> </div>
+
+	</p>
+	<img src="images/siber.jpg" height="110" width="110" >
+	</div>
+	
+	</div>
+	</div>
+	
+	
+	<div class="col-lg-4 col-md-6 mb40 sq-item wow fadeInUp" data-wow-delay=".25s">
+	<div class="feature-box f-boxed style-3">
+	
+	<div class="text">
+		<h5>Siber Güvenlik</h5>
+	
+	<p>Kuzey Koreli Hackerlar Zararlı Doküman Kullanarak MacOS Kullanıcılarını Hedef Alıyor.
+		
+	<div class="de_testi_by"><img alt class="rounded-circle" src="" /> </div>
+	</p>
+	<img src="images/siber.jpg" height="110" width="110" >
+	</div>
+	
+	</div>
+	</div>
+	
+	<div class="col-lg-4 col-md-6 mb40 wow fadeInUp" data-wow-delay="0s">
+	<div class="feature-box f-boxed style-3">
+		
+	<div class="text">
+		<h5>Siber Güvenlik</h5>
+	<p>
+		OwnCloud Üzerinde Bulunan 3 Kritik Güvenlik Açığı İstismar Ediliyor.
+	<div class="de_testi_by"><img alt class="rounded-circle" src="" /> </div>
+	
+	</p>
+	<img src="images/siber.jpg" height="110" width="110" >
+	</div>
+		
+	</div>
+	</div>
+		
+	<div class="col-lg-4 col-md-6 mb40 wow fadeInUp" data-wow-delay="0s">
+		<div class="feature-box f-boxed style-3">
+			
+		<div class="text">
+			<h5>Microsoft Update</h5>
+		<p>Microsoft 5 Yeni Zero-Day Güvenlik Açığı için Güncelleme Yayınladı.
+			
+		<div class="de_testi_by"><img alt class="rounded-circle" src="" /> </div>
+		
+		</p>
+		<img src="images/siber.jpg" height="110" width="110" >
+		</div>
+			
+		</div>
+		</div>
+
+	<div class="col-lg-4 col-md-6 mb40 wow fadeInUp" data-wow-delay="0s">
+	<div class="feature-box f-boxed style-3">
+				
+	<div class="text">
+		<h5>Güvenlik Açığı</h5>
+	<p>OpenVPN Erişim Sunucusu Güvenlik Açıkları: CVE-2023-46849, CVE-2023-46850
+		
+				
+	<div class="de_testi_by"><img alt class="rounded-circle" src="" /> </div>
+			
+			</p>
+			<img src="images/siber.jpg" height="110" width="110" >
+			</div>
+				
+			</div>
+			</div>
+
+	<div class="col-lg-4 col-md-6 mb40 wow fadeInUp" data-wow-delay="0s">
+			<div class="feature-box f-boxed style-3">
+				
+	<div class="text">
+		<h5>Apache Update</h5>
+	<p>Apache HTTP Sunucu Güncellemeleri ve Güvenlik Açıkları.
+				
+	<div class="de_testi_by"><img alt class="rounded-circle" src="" /> </div>
+			
+	</p>
+	<img src="images/siber.jpg" height="110" width="110" >
+	</div>
+				
+
+	
+	</div>
+	</div>
+	
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-md-12 text-center">
+		<a class="btn-custom" href="Duyurular.html">Daha fazla bilgi almak için tıklayın.</a>
+		</div>
+	
+
+
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<div class="col text-center">
+			<div class="spacer-single"></div>
+		<h1>AKSTech</h1>
+</section>
+
+
+
+<section id="subheader" data-bgimage="url(images/background/5.png) bottom">
+	<div class="center-y relative text-center" data-scroll-speed="4">
+	<div class="container">
+	<div class="row">
+		
+	<div class="col-md-8 offset-md-2">
+	<form action="blank.php" class="row" id="form_subscribe" method="post" name="myForm">
+	<div class="col-md-12 text-center">
+	<h1>AKSTech</h1>
+	
+	</div>
+	<div class="clearfix"></div>
+	</form>
+	</div>
+	</div>
+	</div>
+	</div>
+	</section>
+
+	
+	
+	<section id="section-features" class="no-top">
+	<div class="container-fluid">
+	<div class="row" >
+	<div id="owl-features" class="owl-carousel owl-theme" >
+	<div class="feature-box-type-2" >
+	
+	<h4><a href="Server.html">Server</a></h4>
+	<p>Dell Emc Poweredge R750XS XE4310 32GB 2X480GB 16 Disk Yuvalı Server</p>
+	<img src="images/server.JPG" class="img-fluid" alt>
+	</div>
+	<div class="feature-box-type-2">
+	
+	<h4><a href="Switch.html">Switch</a></h4>
+	<p>Cisco WS-C2960X-48FPD-L 48-Port Poe Lan Base Switch</p>
+	<img src="images/switch.JPG" class="img-fluid" alt>
+	</div>
+	<div class="feature-box-type-2">
+	
+	<h4><a href="Access Point.html">Access Point</a></h4>
+	<p>Aruba AP-504 (Rw) Unified Ap Dış Ortam + Ap-Mnt-D Ap Mount Bracket + Ap-Mnt-D Ap Mount Bracket Access Point</p>
+	<img src="images/ap_1.jpg" class="img-fluid" alt>
+	</div>
+	
+	</div>
+	
+	
+	
+	</div>
+	</div>
+	</div>
+	</div>
+	<div class="spacer-double"></div>
+	<div class="container">
+	<div class="padding40 round" data-bgcolor="#f5f5f5">
+	<div class="row align-items-center">
+	<div class="col-md-2">
+	<h4 class="no-bottom">Müşterilerimiz</h4>
+	</div>
+	<div class="col-md-10">
+	<div id="owl-logo" class="logo-carousel owl-carousel owl-theme">
+	<img src="images/1.png" class="img-fluid" alt>
+	<img src="images/2.png" class="img-fluid" alt>
+	<img src="images/3.png" class="img-fluid" alt>
+	<img src="images/4.png" class="img-fluid" alt>
+	<img src="images/5.png" class="img-fluid" alt>
+	<img src="images/6.png" class="img-fluid" alt>
+	<img src="images/7.png" class="img-fluid" alt>
+	<img src="images/8.png" class="img-fluid" alt>
+	</div>
+	</div>
+	</div>
+</section>
+
+
+
+<div class="no-bottom no-top" id="content">
+	<div id="top"></div>
+	<section data-bgimage="url(images/background/1.png) bottom" class="full-height vertical-center">
+	<div class="container">
+	<div class="row align-items-center">
+	<div class="col-lg-5 wow fadeInRight" data-wow-delay=".5s">
+	<h4>AKSTech</h4>
+	<div class="spacer-10"></div>
+	<h2>Bilgi Teknolojileri hakkında aradığın <span class="id-color">her şey</span> bu sayfada.</h2>
+	<p class="lead">Bakım ve destek hizmetlerinden sızma testi hizmetlerine kadar hemen hemen her yerde.</p>
+	<div class="spacer-20"></div>
+	<a class="btn-custom" href="Hakkımızda.html">Daha fazla bilgi edinmek için tıklayın.</a>
+	<div class="mb-sm-30"></div>
+	</div>
+	<div class="col-lg-6 offset-lg-1 wow fadeInLeft" data-wow-delay=".5s">
+	<img src="images/ana.png" class="img-fluid" alt />
+	</div>
+	</div>
+	</div>
+	</section>
+	<section id="section-highlight" data-bgimage="url(images/background/2.png) top">
+	<div class="container">
+	<div class="row">
+	<div class="col-lg-6 offset-lg-3">
+	<div class="text-center">
+	<h2><span class="uptitle id-color">Birimlerimiz</span>Nasıl işler yapıyoruz?</h2>
+	
+	<div class="spacer-20"></div>
+	</div>
+	</div>
+	</div>
+	<div class="row">
+	
+	<div class="col-lg-4 col-md-6 mb40 wow fadeInUp" data-wow-delay="0s">
+	<div class="feature-box f-boxed style-3">
+	
+	<div class="text">
+	<a href="Sızma Testi Hizmetleri.html"><h4>Sızma Testi Hizmetleri</h4></a>
+	<p>
+		Siber saldırganlar tarafından kullanılan aynı araç ve teknikler ile 
+            <br>yapılan sızma testi, gerçek bir saldırıyı simule ederek zafiyetleri tarar.
+
+	</p>
+	</div>
+	
+	</div>
+	</div>
+	
+	
+	<div class="col-lg-4 col-md-6 mb40 sq-item wow fadeInUp" data-wow-delay=".25s">
+	<div class="feature-box f-boxed style-3">
+	
+	<div class="text">
+	<a href="Bakım ve Destek Hizmetleri.html"><h4>Bakım ve Destek Hizmetleri</h4></a>
+	<p>
+		İşletmenizin BT departmanı, kuruluşunuz büyüdükçe IT destek görevleri 
+		  <br>ve bakım sorunlarıyla giderek daha fazla karşı karşıya gelmektedir.
+	</p>
+	</div>
+	
+	</div>
+	</div>
+	
+	
+	<div class="col-lg-4 col-md-6 mb40 sq-item wow fadeInUp" data-wow-delay=".5s">
+	<div class="feature-box f-boxed style-3">
+	
+	<div class="text">
+	<a href="Danışmanlık ve Yönetilebilir Hizmetler.html"><h4>Danışmanlık ve Yönetilebilir Hizmetler</h4></a>
+	<p>
+		Stratejik iş operasyonlarınızı AKSTech’e kaydırmak kuruluşunuzun 
+            <br>önceliklerini hızlandırmaya odaklanma becerinizi geliştirir.
+	</p>
+	</div>
+	<i class="wm i-circle fa fa-line-chart"></i>
+	</div>
+	</div>
+	
+	<div class="col-md-12 text-center">
+	<a class="btn-custom" href="Birimlerimiz.html">Daha fazla hizmet için tıklayın.</a>
+	</div>
+	</div>
+	</div>
+	</section>
+	<section id="section-banner" class="no-top" data-bgimage="url(images/background/3.png) top">
+	<div class="container">
+	<div class="row align-items-center">
+	<div class="col-lg-6 d-none d-lg-block d-xl-block text-center wow fadeInRight" data-wow-delay="0s">
+	<img class="relative img-fluid" src="images/misc/5.png" alt />
+	</div>
+	<div class="col-lg-5 offset-md-1 wow fadeInLeft" data-wow-delay="0s">
+	
+
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</section>
+
+	<section id="section-highlight" data-bgimage="url(images/background/2.png) top">
+		<div class="container">
+		<div class="row">
+		<div class="col-lg-6 offset-lg-3">
+		<div class="text-center">
+		<h2><span class="uptitle id-color"></span>Bizim İçin Neler Söylediler?</h2>
+		
+		<div class="spacer-20"></div>
+		</div>
+		</div>
+		</div>
+		<div class="row">
+		
+		<div class="col-lg-4 col-md-6 mb40 wow fadeInUp" data-wow-delay="0s">
+		<div class="feature-box f-boxed style-3">
+		
+		<div class="text">
+		<p>
+			Destek ekibine teşekkür ederim. Hepsi çok yardımcı oldu.
+	    <div class="de_testi_by"><img alt class="rounded-circle" src="images/john.jpg" /> <span>John, Pixar Studio</span></div>
+	
+		</p>
+		</div>
+		
+		</div>
+		</div>
+		
+		
+		<div class="col-lg-4 col-md-6 mb40 sq-item wow fadeInUp" data-wow-delay=".25s">
+		<div class="feature-box f-boxed style-3">
+		
+		<div class="text">
+		
+		<p>
+			Güzel destek. AKSTech müşteri memnuniyeti sağlıyor.
+	    <div class="de_testi_by"><img alt class="rounded-circle" src="images/sarah.jpg" /> <span>Sarah, Microsoft</span></div>
+		</p>
+		</div>
+		
+		</div>
+		</div>
+		
+		
+		<div class="col-lg-4 col-md-6 mb40 sq-item wow fadeInUp" data-wow-delay=".5s">
+		<div class="feature-box f-boxed style-3">
+		
+		<div class="text">
+		
+		<p>
+			Daha önce bu kadar yerinde bir hizmet almamıştık. Tüm ekip süper.
+	    <div class="de_testi_by"><img alt class="rounded-circle" src="images/michael.jpg" /> <span>Michael, Apple</span></div>
+		</p>
+		</div>
+		<i class="wm i-circle fa fa-line-chart"></i>
+		</div>
+		</div>
+		</div>
+		</div>
+	</section>
+	
+	<section id="section-fun-facts" class="pt60 pb60 text-light bg-color-3">
+	<div class="container">
+	<div class="row">
+	<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0s">
+	<div class="de_count">
+	<h3 class="timer" data-to="15425" data-speed="3000">0</h3>
+	<span>Web Sayfası Hizmeti</span>
+	</div>
+	</div>
+	<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".25s">
+	<div class="de_count">
+	<h3 class="timer" data-to="8745" data-speed="3000">0</h3>
+	<span>Müşteri Desteği</span>
+	</div>
+	</div>
+	<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+	<div class="de_count">
+	<h3 class="timer" data-to="235" data-speed="3000">0</h3>
+	<span>Kazanılan Ödüller</span>
+	</div>
+	</div>
+	<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".75s">
+	<div class="de_count">
+	<h3 class="timer" data-to="15" data-speed="3000">0</h3>
+	<span>Deneyim</span>
+	</div>
+	</div>
+	</div>
+	</div>
+	</section>
+	</div>
+	
+	
+
+<footer class="footer-light">
+    <div class="container">
+    <div class="row">
+    <div class="col-lg-4">
+    <div class="widget">
+    <a href="index.html"><img alt class="logo" src="images/logo-1.png"></a>
+    <div class="spacer-20"></div>
+    <address>
+		Zümrütevler Mah. <br>
+		Gül Cad. No: 5 <br>
+		Maltepe/İstanbul <br>
+		+01 2345678901 <br>
+		Instagram: <a href="#">akstech</a><br>
+		Twitter: <a href="#">akstech</a><br>
+		LinkedIn: <a href="#">AKSTech</a><br>
+		Tasarım: <a href="Hakkımızda.html">Kieran Monaghan</a> <br>
+      Kieran Monaghan: HTML5, CSS ve JS <br>
+      ile web tasarımı alanında <br>
+      ilerlemektedir.
+    
+    
+    </address>
+    
+    </div>
+    </div>
+    <div class="col-lg-2">
+    <div class="widget">
+    <h5>Menü</h5>
+    <ul>
+    <li><a href="index.html">Anasayfa</a></li>
+    <li><a href="Hakkımızda.html">Hakkımızda</a></li>
+    <li><a href="Misyon-Vizyon.html">Misyon-Vizyon</a></li>
+    <li><a href="Ürünlerimiz.html">Ürünlerimiz</a></li>
+    <li><a href="Birimlerimiz.html">Birimlerimiz</a></li>
+    <li><a href="İletişim.html">İletişim</a></li>
+    
+    </ul>
+    </div>
+    </div>
+    <div class="col-lg-2">
+    <div class="widget">
+    <h5>Sayfalar</h5>
+    <ul>
+		<li><a href="Server.html">Server</a></li>
+		<li><a href="Switch.html">Switch</a></li>
+		<li><a href="Access Point.html">Access Point</a></li>
+		<li><a href="Duyurular.html">Duyurular</a></li>
+		<li><a href="login.html">Giriş Yap</a></li>
+    
+    </ul>
+    </div>
+    </div>
+    <div class="col-lg-4">
+    <div class="widget">
+    <h5>Bülten</h5>
+    <p>Haberleri, güncellemeleri ve özel teklifleri mail kutunuzda görmek için bültenimize kaydolun.</p>
+    <form action="blank.php" class="row" id="form_subscribe" method="post" name="form_subscribe">
+    <div class="col text-center">
+    <input class="form-control" id="name_1" name="name_1" placeholder="Mail adresinizi girin." type="text" /> 
+    <div class="clearfix"></div>
+    </div>
+    </form>
+    <div class="spacer-10"></div>
+    
+    </div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-6 sm-text-center mb-sm-30">
+    <div class="mt10">&copy; Telif Hakkı 2023 - AKSTech </div>
+    </div>
+    <div class="col-md-6 text-md-right text-sm-left">
+    <div class="social-icons">
+		<a href="#"><img src="images/facebook.png" height="20" width="20"></a>
+		<a href="#"><img src="images/twitter.png" height="20" width="20"></a>
+		<a href="#"><img src="images/linkedin.png" height="20" width="20"></a>
+		<a href="#"><img src="images/instagram.jpg" height="20" width="20"></a>
+    </div>
+    </div>
+    </div>
+    </div>
+    </footer>
+    
+    <div id="preloader">
+    <div class="spinner">
+    <div class="bounce1"></div>
+    <div class="bounce2"></div>
+    <div class="bounce3"></div>
+    </div>
+    </div>
+    </div>
+    
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/easing.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/enquire.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.plugin.js"></script>
+    <script src="js/typed.js"></script>
+    <script src="js/jquery.countTo.js"></script>
+    <script src="js/jquery.countdown.js"></script>
+    <script src="js/designesia.js"></script>
+	<!--<script src="js1/bootstrap-datepicker.js"></script>
+    <script src="js1/bootstrap.min.js"></script>
+    <script src="js1/colors.js"></script>
+    <script src="js1/easing.js"></script>
+    <script src="js1/gmaps.min.js"></script>
+    <script src="js1/jquery-migrate-3.0.0.js"></script>
+    <script src="js1/jquery-ui.min.js"></script>
+    <script src="js1/jquery.counterup.min.js"></script>
+    <script src="js1/jquery.magnific-popup.min.js"></script>
+    <script src="js1/jquery.min.js"></script>
+    <script src="js1/jquery.nav.js"></script>
+    <script src="js1/jquery.scrollUp.min.js"></script>
+    <script src="js1/main.js"></script>
+    <script src="js1/map-active.js"></script>
+    <script src="js1/niceselect.js"></script>
+	<script src="js1/owl-carousel.js"></script>
+    <script src="js1/popper.min.js"></script>
+    <script src="js1/slicknav.min.js"></script>
+    <script src="js1/steller.js"></script>
+    <script src="js1/tilt.jquery.min.js"></script>
+    <script src="js1/wow.min.js"></script>-->
+    </body>
+

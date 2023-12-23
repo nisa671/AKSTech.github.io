@@ -1,0 +1,30 @@
+.slider .single-slider{
+	position:relative;
+}
+.slider .single-slider:before{
+	position:absolute;
+	content:"";
+	left:0;
+	top:0;
+	height:100%;
+	width:100%;
+	background:#fff;
+	opacity:0.5;
+}
+.slider .single-slider h1 {
+	font-size: 28px;
+	font-weight: 600;
+	line-height: 35px;
+}
+.slider .single-slider .text {
+	margin-top: 80px;
+}
+.slider.index2 .single-slider .text{
+	margin-top:80px;
+}
+.slider .owl-carousel .owl-nav div {
+	height: 40px;
+	width: 40px;
+	line-height: 40px;
+	border-radius: 4px;
+}
